@@ -1,13 +1,11 @@
 <section class="orders-show">
 
-<%=line_items(@order)%>
-
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order! In your order:</h4><br>
+    <h4>Thank you for your order! This was your order:</h4><br>
     <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -20,7 +18,6 @@
       </thead>
       <tbody>
         <% line_items(@order).each do |item| %>
-          <%= item.inspect %>
           <%= render 'line_item', product: item[:product], quantity: item[:quantity_ordered].to_i  %>
         <% end %>
       </tbody>
@@ -30,7 +27,7 @@
             TOTAL:
           </th>
           <th>
-            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol @order['total_cents'] / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -38,6 +35,7 @@
   </div>
   </div>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+  <%= link_to "Back to homepage", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
+']
