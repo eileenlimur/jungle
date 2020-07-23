@@ -29,4 +29,15 @@ class ApplicationController < ActionController::Base
     cookies[:cart]
   end
 
+  def line_items(order)
+    @products = LineItem
+    .where(order_id: order.id)
+    .map {| product | {
+      'quantity_ordered': product.quantity,
+      'total_price': product.total_price_cents,
+      'product': Product.find_by(id: product.id)}}
+  end
+
+  helper_method :line_items
+  
 end
