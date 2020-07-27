@@ -1,9 +1,11 @@
 <header class="page-header">
   <h1>Dashboard</h1>
 </header>
+
 <div class="text-muted">
   <h2><em>Welcome back.</em></h2>
 </div>
+
 <div class="text-info">
   <p>You have <u><%= link_to (pluralize @product_count, 'type'), '/admin/products' %></u> of products in stock</p>
   <p>You have <u><%= link_to (pluralize @category_count, 'category'), '/admin/categories' %></u> of products in stock</p>
