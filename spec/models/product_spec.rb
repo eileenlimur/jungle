@@ -10,7 +10,7 @@ RSpec.describe Product, type: :model do
     end
     
     context "when all required params are given" do
-      it "should have no errors" do
+      it "product object should contain no errors" do
         @product.name = "Silly Putty"
         @product.quantity = 20
         @product.price = 30
@@ -21,7 +21,7 @@ RSpec.describe Product, type: :model do
     end
 
     context "when no name is given" do
-      it "should include a name error in the error message array" do
+      it "product object should include a name error in the error message array" do
         @product.quantity = 20
         @product.price = 30
         @product.category = @category
@@ -31,7 +31,7 @@ RSpec.describe Product, type: :model do
     end
 
     context "when no category is given" do
-      it "should include a category error in the error message array" do
+      it "product object should include a category error in the error message array" do
         @product.name = "Silly Putty"
         @product.quantity = 20
         @product.price = 30
@@ -41,7 +41,7 @@ RSpec.describe Product, type: :model do
     end
 
     context "when no quantity is given" do
-      it "should include a quantity error in the error message array" do
+      it "product object should include a quantity error in the error message array" do
         @product.name = "Silly Putty"
         @product.price = 30
         @product.category = @category
@@ -51,7 +51,7 @@ RSpec.describe Product, type: :model do
     end
 
     context "when no price is given" do
-      it "should include a price error in the error message array" do
+      it "product object should include a price error in the error message array" do
         @product.name = "Silly Putty"
         @product.quantity = 20
         @product.category = @category
