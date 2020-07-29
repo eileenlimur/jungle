@@ -17,7 +17,7 @@ RSpec.feature "Visitor clicks on product details button from product index", typ
 
   scenario "They see the right product detail page" do
     visit root_path
-    within(".product:first-of-type") { find_link("Details").click }
+    within("article:first-of-type") { find_link("Details").click }
     expect(page).to have_text "Quantity"
     save_screenshot
   end
