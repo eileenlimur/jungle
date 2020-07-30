@@ -20,6 +20,7 @@ Jungle is a mini e-commerce application built with Rails 4.2 for purposes of tea
 
 ![Jungle Homepage](https://github.com/eileenlimur/jungle/blob/master/app/assets/images/jungle-main-page.png?raw=true)
 
+
 ![Jungle Cart](https://github.com/eileenlimur/jungle/blob/master/app/assets/images/jungle-shopping-cart.png?raw=true)
 
 ## Setup
