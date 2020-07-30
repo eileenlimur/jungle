@@ -16,6 +16,9 @@ RSpec.feature "Visitor adds a product to cart from homepage", type: :feature, js
 
   scenario "They see the cart items count increase to 1" do
     visit root_path
-    within ("article:first-of-type") { find_link("Details").click }
+    within("article:first-of-type") { find_button("Add").click }
+    expect(page).to have_text "My Cart (1)"
+    save_screenshot
+    # within (".navbar") { find_link("Details").click }
   end
 end
