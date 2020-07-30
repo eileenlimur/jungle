@@ -7,6 +7,7 @@ Jungle is a mini e-commerce application built with Rails 4.2 for purposes of tea
   - empty cart message
 - display:
   - sold-out badge on preview images for sold-out products
+  - sale header displays if a sale is going on
 - features:
   - users can register, login and logout. Bcrypt is used to validate and hash passwords
 - pages:
@@ -15,6 +16,7 @@ Jungle is a mini e-commerce application built with Rails 4.2 for purposes of tea
     - create a new product category
     - create a new product listing
     - delete current product listings
+    - view all sales
 
 ## Images
 
