@@ -1,6 +1,23 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+Jungle is a mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. The basic app was created by Lighthouse Labs. What I added:
+
+- bug fixes:
+  - basic HTTP authorization for admin security
+  - empty cart message
+- display:
+  - sold-out badge on preview images for sold-out products
+- features:
+  - users can register, login and logout. Bcrypt is used to validate and hash passwords
+- pages:
+  - order details page shows the details of the order the user has just made
+  - admin dashboard from which admins can:
+    - create a new product category
+    - create a new product listing
+    - delete current product listings
+
+## Images
+
 
 
 ## Setup

@@ -15,8 +15,12 @@
           <% if current_user %>
             Signed in as <%= current_user.first_name %>
             <%= link_to "Logout", '/logout' %>
+            </li>
+            <li>
           <% else %>
             <%= link_to 'Login', '/login' %>
+          </li>
+          <li>
             <%= link_to 'Signup', '/signup' %>
           <% end %>
         </li>
